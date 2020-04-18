@@ -1,0 +1,18 @@
+@media only screen and (max-width: 750px) {
+  #canvas { margin: 0 auto; padding: 20px; }
+}
+
+body { background-image: none !important; background-color: #fff !important; color: #3a3a3a !important; }
+p { color: #3a3a3a !important; }
+body h1, body h2, body h3, body #topNav a, body a, body a:visited, .social-icons-color-white.social-icons-style-regular .sqs-use--icon { color: #424242 !important; }
+body #topNav a:hover, body #topNav .active-link>a { color: #f53db8 !important; }
+body .activeButton a { color: #fff !important; }
+.sqs-block-horizontalrule hr { background-color: #dcdcdc !important; }
+.sqs-gallery-block-grid.sqs-gallery-block-meta-only-title .margin-wrapper .image-slide-title, .summary-block .summary-title, .sqs-block-summary-v2 .summary-title a, .sqs-block-summary-v2 .summary-heading a, .sqs-block-summary-v2 .summary-title a:link, .sqs-block-summary-v2 .summary-heading a:link, .sqs-block-summary-v2 .summary-title a:visited, .sqs-block-summary-v2 .summary-heading a:visited { color: #3c3c3c !important; }
+.underline-body-links .html-block a, .underline-body-links .project-description a, .underline-body-links .entry-content a, .underline-body-links .product-excerpt a, .underline-body-links .markdown-block a { border-color: transparent !important; }
+.shareButton:hover { background-color: #3c3c3c !important; color: #fff !important; }
+.social-icons-color-white.social-icons-style-regular .sqs-use--icon { fill: #b7b7b7 !important; }
+.small-button-style-outline .sqs-block-button .sqs-block-button-element--small { border-color: #000 !important; }
+.sqs-block-summary-v2 .summary-excerpt p:last-of-type { opacity: 0.6 !important; font-weight: 500 !important; }
+.moon { display: inline-block !important; }
+.sun { display: none !important; }
