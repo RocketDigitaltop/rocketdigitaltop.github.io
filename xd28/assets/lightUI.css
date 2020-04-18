@@ -1,0 +1,9 @@
+@media only screen and (max-width: 750px) {
+  #canvas { margin: 0 auto; padding: 20px; }
+}
+.sqs-block-horizontalrule hr { background-color: #dcdcdc !important; }
+.underline-body-links .html-block a, .underline-body-links .project-description a, .underline-body-links .entry-content a, .underline-body-links .product-excerpt a, .underline-body-links .markdown-block a { border-color: transparent !important; }
+.shareButton:hover { background-color: #3c3c3c !important; color: #fff !important; }
+.social-icons-color-white.social-icons-style-regular .sqs-use--icon { fill: #b7b7b7 !important; }
+.small-button-style-outline .sqs-block-button .sqs-block-button-element--small { border-color: #000 !important; }
+.sqs-block-summary-v2 .summary-excerpt p:last-of-type { opacity: 0.6 !important; font-weight: 500 !important; }
