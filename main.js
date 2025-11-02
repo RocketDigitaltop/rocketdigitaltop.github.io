@@ -1576,3 +1576,97 @@ if (alternateLink) {
 
 // Also check periodically (fallback)
 setInterval(updateFormTheme, 500);
+
+// Pill Select Multi-Select Functionality
+(function() {
+  let selectedValues = [];
+  
+  // Use event delegation on the container - more reliable
+  function initPillSelect() {
+    const container = document.querySelector('.pill-select-container');
+    const subjectsInput = document.getElementById('subjects-input');
+    
+    if (container && subjectsInput) {
+      // Check if already initialized
+      if (container.hasAttribute('data-pill-container-initialized')) {
+        return;
+      }
+      
+      container.setAttribute('data-pill-container-initialized', 'true');
+      
+      // Add click listener to the container using event delegation
+      container.addEventListener('click', function(e) {
+        // Don't process clicks on the hidden input
+        if (e.target.tagName === 'INPUT') return;
+        
+        const pill = e.target.closest('.pill-option');
+        if (!pill) return;
+        
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const value = pill.getAttribute('data-value');
+        if (!value) return;
+        
+        // Toggle selection
+        if (pill.classList.contains('selected')) {
+          // Deselect
+          pill.classList.remove('selected');
+          selectedValues = selectedValues.filter(item => item !== value);
+        } else {
+          // Select
+          pill.classList.add('selected');
+          if (!selectedValues.includes(value)) {
+            selectedValues.push(value);
+          }
+        }
+        
+        // Update hidden input
+        if (subjectsInput) {
+          subjectsInput.value = selectedValues.join(', ');
+        }
+        
+        console.log('Pill clicked:', value);
+        console.log('Selected values:', selectedValues);
+      });
+      
+      // Add form validation (only once)
+      const form = subjectsInput.closest('form');
+      if (form && !form.hasAttribute('data-pill-form-initialized')) {
+        form.setAttribute('data-pill-form-initialized', 'true');
+        form.addEventListener('submit', function(e) {
+          const input = document.getElementById('subjects-input');
+          const currentValues = input && input.value ? input.value.split(', ') : [];
+          if (currentValues.length === 0 || (currentValues.length === 1 && currentValues[0] === '')) {
+            e.preventDefault();
+            alert('Please select at least one service of interest.');
+            return false;
+          }
+        });
+      }
+      
+      console.log('Pill select initialized successfully');
+    } else {
+      console.log('Pill select elements not found:', { container: !!container, subjectsInput: !!subjectsInput });
+    }
+  }
+  
+  // Try multiple times to ensure it works
+  function tryInit() {
+    initPillSelect();
+  }
+  
+  // Initialize immediately if DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', tryInit);
+  } else {
+    tryInit();
+  }
+  
+  // Multiple attempts with delays
+  setTimeout(tryInit, 50);
+  setTimeout(tryInit, 200);
+  setTimeout(tryInit, 500);
+  setTimeout(tryInit, 1000);
+})();
+

@@ -235,15 +235,16 @@
                         <input type="email" name="email" style="width:100%;padding:12px;border:1px solid var(--border-color, #ddd);border-radius:4px;font-size:16px;background:var(--input-bg, #fff);color:var(--input-text, #000);" required>
                       </div>
                       <div style="margin-bottom:20px;">
-                        <label style="display:block;margin-bottom:5px;font-weight:600;color:var(--text-color, inherit);">Subject</label>
-                        <select name="subject" style="width:100%;padding:12px;border:1px solid var(--border-color, #ddd);border-radius:4px;font-size:16px;background:var(--input-bg, #fff);color:var(--input-text, #000);">
-                          <option>Data Analytics</option>
-                          <option>AI Agent Solutions</option>
-                          <option>SaaS Development</option>
-                          <option>Website Development</option>
-                          <option>Digital Marketing</option>
-                          <option>General Inquiry</option>
-                        </select>
+                        <label style="display:block;margin-bottom:5px;font-weight:600;color:var(--text-color, inherit);">Services of Interest</label>
+                        <div class="pill-select-container" style="display:flex;flex-wrap:wrap;gap:10px;padding:12px;border:1px solid var(--border-color, #ddd);border-radius:4px;background:var(--input-bg, #fff);min-height:50px;">
+                          <input type="hidden" name="subjects" id="subjects-input" value="">
+                          <span class="pill-option" data-value="Data Analytics" style="display:inline-block;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:14px;border:2px solid var(--border-color, #ddd);background:var(--pill-inactive-bg, transparent);color:var(--pill-inactive-text, var(--text-color, #333));transition:all 0.3s ease;">Data Analytics</span>
+                          <span class="pill-option" data-value="AI Agent Solutions" style="display:inline-block;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:14px;border:2px solid var(--border-color, #ddd);background:var(--pill-inactive-bg, transparent);color:var(--pill-inactive-text, var(--text-color, #333));transition:all 0.3s ease;">AI Agent Solutions</span>
+                          <span class="pill-option" data-value="SaaS Development" style="display:inline-block;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:14px;border:2px solid var(--border-color, #ddd);background:var(--pill-inactive-bg, transparent);color:var(--pill-inactive-text, var(--text-color, #333));transition:all 0.3s ease;">SaaS Development</span>
+                          <span class="pill-option" data-value="Website Development" style="display:inline-block;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:14px;border:2px solid var(--border-color, #ddd);background:var(--pill-inactive-bg, transparent);color:var(--pill-inactive-text, var(--text-color, #333));transition:all 0.3s ease;">Website Development</span>
+                          <span class="pill-option" data-value="Digital Marketing" style="display:inline-block;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:14px;border:2px solid var(--border-color, #ddd);background:var(--pill-inactive-bg, transparent);color:var(--pill-inactive-text, var(--text-color, #333));transition:all 0.3s ease;">Digital Marketing</span>
+                          <span class="pill-option" data-value="General Inquiry" style="display:inline-block;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:14px;border:2px solid var(--border-color, #ddd);background:var(--pill-inactive-bg, transparent);color:var(--pill-inactive-text, var(--text-color, #333));transition:all 0.3s ease;">General Inquiry</span>
+                        </div>
                       </div>
                       <div style="margin-bottom:20px;">
                         <label style="display:block;margin-bottom:5px;font-weight:600;color:var(--text-color, inherit);">Message</label>
@@ -333,11 +334,11 @@
                 </div>
               </div>
             </div>
-            <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-179f8c9da7aa428c1198">
+            <!-- <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-179f8c9da7aa428c1198">
               <div class="sqs-block-content">
                 <h3 style="text-align:center;white-space:pre-wrap;">PROUDLY DESIGNED USING <strong>Rocket Digital<br></strong>Thank you for all your assistance.</h3>
               </div>
-            </div>
+            </div> -->
             <div class="sqs-block socialaccountlinks-v2-block sqs-block-socialaccountlinks-v2" data-block-type="54" id="block-yui_3_17_2_1_1551798237865_7092">
               <div class="sqs-block-content">
 

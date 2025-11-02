@@ -519,3 +519,55 @@ body.light-theme {
   --button-bg: #000;
   --button-text: #fff;
 }
+
+/* Pill Select Multi-Select Styling */
+.pill-select-container {
+  --pill-inactive-bg: transparent;
+  --pill-inactive-text: var(--text-color, #333);
+  --pill-inactive-border: var(--border-color, #ddd);
+  --pill-active-bg: #ffd05b;
+  --pill-active-text: #000;
+  --pill-active-border: #ffd05b;
+}
+
+/* Dark mode pill colors */
+body {
+  --pill-inactive-bg: transparent;
+  --pill-inactive-text: #ccc;
+  --pill-inactive-border: #555;
+  --pill-active-bg: #ffd05b;
+  --pill-active-text: #000;
+  --pill-active-border: #ffd05b;
+}
+
+/* Light mode pill colors */
+link[title="alternate"]:not([disabled]) ~ body,
+body:has(link[title="alternate"]:not([disabled])) {
+  --pill-inactive-bg: transparent;
+  --pill-inactive-text: #333;
+  --pill-inactive-border: #ddd;
+  --pill-active-bg: #ffd05b;
+  --pill-active-text: #000;
+  --pill-active-border: #ffd05b;
+}
+
+.pill-option {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 1;
+}
+
+.pill-option:hover {
+  transform: scale(1.05);
+}
+
+.pill-option.selected {
+  background: var(--pill-active-bg, #ffd05b) !important;
+  color: var(--pill-active-text, #000) !important;
+  border-color: var(--pill-active-border, #ffd05b) !important;
+  font-weight: 600;
+}
